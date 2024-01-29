@@ -1,0 +1,61 @@
+/*primary*/
+/*secondary*/
+/*accent*/
+/*background*/
+/*text*/
+.App {
+  overflow-x: hidden;
+  color: #151b2c;
+  position: relative;
+}
+
+.btn {
+  padding: 11px 26px 11px 26px;
+  width: -moz-max-content;
+  width: max-content;
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 34px;
+  background-color: #3ABBC9;
+}
+.btn:hover {
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  animation: jump 2s ease-out;
+}
+@keyframes jump {
+  0% {
+    transform: translate(12rem, -1.9rem);
+  }
+  50% {
+    transform: translate(12rem, 1.5rem);
+  }
+  50% {
+    transform: translate(12rem, -1.3rem);
+  }
+  100% {
+    transform: translate(12rem, -1.9rem);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: #3ABBC9;
+  text-decoration: underline;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  width: 100%;
+}/*# sourceMappingURL=App.css.map */

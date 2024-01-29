@@ -1,0 +1,88 @@
+/*primary*/
+/*secondary*/
+/*accent*/
+/*background*/
+/*text*/
+.custom-shape-divider-top-1699796100 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1699796100 svg {
+  position: relative;
+  display: block;
+  width: calc(130% + 1.3px);
+  height: 99px;
+}
+
+.custom-shape-divider-top-1699796100 .shape-fill {
+  fill: #FFFFFF;
+}
+
+footer {
+  position: relative;
+  margin-top: 3rem;
+  padding: 6rem 3rem 0rem 3rem;
+  background-color: black;
+  color: white;
+  line-height: 1.5;
+  overflow-y: hidden;
+}
+
+.f-main-item > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+h2 {
+  padding-bottom: 0.625rem;
+  font-size: 1.375rem;
+}
+
+.ft-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.f-main-item {
+  width: 100%;
+  max-width: 15rem;
+}
+
+.f-legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  height: 6rem;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+@media only screen and (min-width: 29.8125rem) {
+  .f-main {
+    justify-content: space-around;
+  }
+}
+@media only screen and (min-width: 77.5rem) {
+  .f-main {
+    justify-content: space-evenly;
+  }
+}
+.roll-up {
+  width: 140px;
+}/*# sourceMappingURL=Footer.css.map */

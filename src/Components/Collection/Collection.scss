@@ -1,0 +1,38 @@
+.collection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.no-collection{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateX(50%);
+}
+.no-collection>p{
+font-size:2rem;
+font-weight: bold;
+font-style: italic;
+}
+
+.saved-cards{
+    display: grid;
+    gap: 4rem;
+    justify-content: center;
+    padding-inline: 4rem;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 4rem;
+    .c-btm{
+        .save{
+            display: none;
+        }
+    }
+ }
+.c-mssg{
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: -3rem;
+}
+
+
