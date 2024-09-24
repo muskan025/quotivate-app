@@ -271,7 +271,7 @@ export const myquotes = [
   {
     "id": 3,
     "image": "image3.jpg",
-    "quote": "Blunders occur at a blink, Wonders occur after you stink.",
+    "quote": "Blunders occur in a blink, wonders occur after you stink.",
     "author": "Muskan Dodmani",
     "like": 0,
     "save": 0
@@ -319,7 +319,7 @@ export const myquotes = [
   {
     "id": 9,
     "image": "image9.jpg",
-    "quote": "Emotions are like thread, and merged threads aren't easily sorted.",
+    "quote": "Emotions are like threads, and merged threads aren't easily sorted.",
     "author": "Muskan Dodmani",
     "like": 0,
     "save": 0
@@ -375,7 +375,7 @@ export const myquotes = [
   {
     "id": 16,
     "image": "image10.jpg",
-    "quote": "Don't let happiness escape as that will create a void where sorrow will reside.",
+    "quote": "Don't let happiness escape, as it creates a void where sorrow will reside.",
     "author": "Muskan Dodmani",
     "like": 0,
     "save": 0
