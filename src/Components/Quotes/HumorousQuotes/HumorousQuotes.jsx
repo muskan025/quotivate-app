@@ -5,7 +5,7 @@ export const Humorousquotes = () => {
   return (
     <div className='humorousquotes'> 
      
- <div className="cards-container" style={{width:"100%"}}>
+ <div className="cards-container">
   {humorousquotes.length>0 && humorousquotes.map((quote,idx)=>{
      return <Card quoteData={quote}/>
   }

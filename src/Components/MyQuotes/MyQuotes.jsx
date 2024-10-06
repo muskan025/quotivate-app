@@ -3,7 +3,6 @@ import "./MyQuotes.scss";
 import {myquotes} from "../Quotes/QuotesData";
 import {Card} from "../Card/Card";
  import path from '../../images/images-quotes/path.jpg'
-import { Headersvg } from "../svgs/headersvg/Headersvg";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 export const MyQuotes = () => {

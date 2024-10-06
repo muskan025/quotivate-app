@@ -27,11 +27,15 @@ export const Collection = () => {
       />
 
       <div className="saved-cards">
+     
         {quoteCollection.length > 0 ?
           quoteCollection.map((data, idx) => (
             <Card quoteData={data} key={idx} />
-          )):(<div  className="no-collection"><FontAwesomeIcon icon={faFolderOpen} style={{fontSize:"3rem"}}/>
-          <p>No collection yet!</p></div>)}
+          )) : (
+            <div  className="no-collection"><FontAwesomeIcon icon={faFolderOpen} />
+           <p>No collection yet!</p></div>
+           )
+          }
       </div>
 
       <Footer />

@@ -3,33 +3,42 @@
 .quotes{
   display: flex;
   flex-direction: column;
-  // justify-content: center;
- 
 }
 
 .quest{
-    display:flex;
-    height: 12rem;
-   
- padding-left: 10rem;
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
   p{
-    transform:translate(60%, 30%);
-   font-size: 2rem;
-//    border: 1px solid black;
+   font-size: $fs-subheading;
 
   }
   .emojis{
     display:flex;
     align-items: center;
-     width:20rem;
+    column-gap: 0.5rem;
+    justify-content: center;
+ 
      img{
-        width:5rem;
- &:hover{
-    cursor: pointer;
- }
+      width: 25%;  
+      max-width: 5rem;  
+      min-width: 3rem;  
+      height: auto;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
      }
     .afraid{
-        width:6rem;
+      width: 27%;  
+      max-width: 6rem;
+      min-width: 3.5rem;
 
         &:hover{
             content:'I am afraid'
@@ -64,5 +73,15 @@
  padding:2rem; 
  gap:2rem;
  justify-content: center;
- width: 80%;
+}
+
+@media (max-width: 325px){
+  .emojis {
+    img{
+      width: 20%;
+    }
+    .afraid{
+      width: 22%;
+    }
+  }
 }

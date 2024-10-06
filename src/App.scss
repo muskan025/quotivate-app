@@ -4,18 +4,13 @@
  .App{
   overflow-x: hidden;
   color: #151b2c;
- //   background-color: rgba(240, 243, 240, 0.908);
-position: relative;
+ position: relative;
   }
-
-  // .container{
-  //   width: 80%;
-  //   max-width: 1100px;     
-  // }
+ 
 
 .btn{
-padding:11px 26px 11px 26px;
-width:max-content;
+padding: 0.7em 1.6em;
+width:fit-content;
 outline: none;
 border:none;
 color:white;
@@ -30,16 +25,16 @@ background-color: $blue;
  }
  @keyframes jump {
   0% {
-    transform: translate(12rem,-1.9rem);
+    transform: translateY(-1.9rem);
   }
   50% {
-    transform: translate(12rem,1.5rem);
+    transform: translateY(1.5rem);
   }
   50% {
-    transform: translate(12rem,-1.3rem);
+    transform: translateY(-1.3rem);
   }
   100% {
-    transform: translate(12rem,-1.9rem);
+    transform: translateY(-1.9rem);
   }
   
  }
@@ -61,5 +56,6 @@ display: flex;
 flex-wrap: wrap;
 gap:2rem;
 justify-content: center;
-width: 100%;
- }
+margin-block: 4rem;
+padding-inline: 2rem;
+  }

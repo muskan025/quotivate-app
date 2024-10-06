@@ -3,6 +3,15 @@ import './Footer.css'
  import Lottie from 'lottie-react'
 import arrow from '../../images/arrow.json'
 export const Footer = () => {
+
+  const scrollToTop = (e) => {
+    e.preventDefault(); 
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <footer>
     <section className='f-main'>
@@ -34,14 +43,13 @@ export const Footer = () => {
       
     </section>
   
-   {/* section */}
   
     <section className='f-legal'>
       <div className="copyright">
         &copy; 2023 Quotivate. All rights reserved.
       </div>
       <div className="roll-up">
-    <a href="#">
+    <a href="#" onClick={scrollToTop}>
       <Lottie className="lottie-animation" animationData={arrow} />
     </a>
   </div>

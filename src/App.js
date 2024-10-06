@@ -7,18 +7,12 @@ import { Navbar } from './Components/Navbar/Navbar';
 import { Humorousquotes } from './Components/Quotes/HumorousQuotes/HumorousQuotes';
 import {Suspense, lazy } from 'react';
 import { Loading } from './Loading';
-// import lazyLoad from './lazyLoad.js';
-
+ 
 const Home=lazy(()=>import('./Components/Home/Home').then((module)=>{console.log("moduleHome",module) 
   return {default:module.Home}}))
 const Quotes=lazy(()=>import('./Components/Quotes/Quotes').then((module)=>{return {default:module.Quotes}}))
 const Collection=lazy(()=>import('./Components/Collection/Collection').then((module)=>{return {default:module.Collection}}))
 const MyQuotes=lazy(()=>import('./Components/MyQuotes/MyQuotes').then((module)=>{return {default:module.MyQuotes}}))
-
-// const Home= lazyLoad("./Components/Home/Home","Home")
-// const Quotes=lazyLoad("./Components/Quotes/Quotes","Quotes")
-// const Collection= lazyLoad("./Components/Collection/Collection","Collection")
-// const MyQuotes= lazyLoad("./Components/MyQuotes/MyQuotes","MyQuotes")
 
 function App() {
   return (

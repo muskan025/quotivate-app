@@ -4,7 +4,7 @@ import { Card } from '../../Card/Card'
 export const InsanityQuotes = () => {
   return (
     <div className='insanityquotes'> 
- <div className="cards-container" style={{width:"100%"}}>
+ <div className="cards-container" >
   {insanityquotes.length>0 && insanityquotes.map((quote,idx)=>{
      return <Card quoteData={quote}/>
   }

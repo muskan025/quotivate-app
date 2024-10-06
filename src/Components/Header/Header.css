@@ -5,12 +5,22 @@
 /*text*/
 .intro {
   position: relative;
-  height: 20vh;
   width: 100%;
-  padding-left: 10rem;
-  padding-bottom: 13rem;
+  padding-bottom: 8rem;
   padding-top: 2rem;
+  padding-inline: 0.5rem;
   background-color: black;
+}
+.intro .img-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro .text-container {
+  margin-left: 2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 500px;
 }
 .intro span {
   font-weight: bold;
@@ -22,10 +32,10 @@
   letter-spacing: 0.02em;
   font-size: 1rem;
   margin-top: 1.5rem;
-  margin-left: 2rem;
-  width: 37rem;
   color: white;
   animation: slide 2s ease;
+  margin: 0;
+  text-wrap: pretty;
 }
 @keyframes slide {
   0% {
@@ -36,7 +46,8 @@
   }
 }
 .intro .intro-img {
-  width: 13.5rem;
+  max-width: 13.5rem;
+  width: 100%;
   height: 13.5rem;
   border-radius: 50%;
   float: left;
@@ -60,23 +71,17 @@
   position: absolute;
   box-shadow: 0 0 aliceblue;
 }
-.intro .star1 {
-  right: 12rem;
-  top: 1rem;
-}
-.intro .star2 {
-  right: 14rem;
-  top: 3rem;
-}
-.intro .star3 {
-  right: 16rem;
-  top: 0rem;
-}
-.intro .star4 {
-  right: 19rem;
-  top: 1rem;
-}
-.intro .star5 {
-  right: 18rem;
-  top: 4rem;
+
+@media (max-width: 768px) {
+  .img-text-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-text-container .intro-img {
+    margin-right: 0;
+  }
+  .img-text-container .text-container {
+    margin-left: 0;
+    max-width: 300px;
+  }
 }/*# sourceMappingURL=Header.css.map */

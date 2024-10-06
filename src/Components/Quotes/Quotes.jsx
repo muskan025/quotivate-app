@@ -1,27 +1,25 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./Quotes.css";
- import happy from "../../images/images-quotes/happy.png";
+import happy from "../../images/images-quotes/happy.png";
 import sad from "../../images/images-quotes/sad.png";
 import angry from "../../images/images-quotes/angry.png";
 import afraid from "../../images/images-quotes/afraid.png";
 import cat from "../../images/images-quotes/cat.jpg";
- import { Card } from "../Card/Card";
- import { Header } from "../Header/Header";
+import { Card } from "../Card/Card";
+import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
 import { useSelector } from "react-redux";
 
 export const Quotes = () => {
-   const [checkMood, setCheckMood] = useState("");
-  //  const [quotes,setQuotes]=useState([])
-
+  const [checkMood, setCheckMood] = useState("");
   const happyQuotes = useSelector((state) => state.counter.happyQuotes);
   const angryQuotes = useSelector((state) => state.counter.angryQuotes);
   const afraidQuotes = useSelector((state) => state.counter.afraidQuotes);
-  const [sadQuotes,setSadQuotes]=useState([]);
-  const quotes= checkMood==="happy"?happyQuotes:(checkMood==="sad"? sadQuotes: checkMood==="angry"?angryQuotes:afraidQuotes)
-   const sadURL =
+  const [sadQuotes, setSadQuotes] = useState([]);
+  const quotes = checkMood === "happy" ? happyQuotes : (checkMood === "sad" ? sadQuotes : checkMood === "angry" ? angryQuotes : afraidQuotes)
+  const sadURL =
     "https://653f87939e8bd3be29e0befa.mockapi.io/quotivate/v1/sadquotes";
- 
+
   async function fetchQuotesAPI(url) {
     try {
       const response = await fetch(url);
@@ -29,23 +27,22 @@ export const Quotes = () => {
         throw new Error("The process is taking longer time");
       }
       const data = await response.json();
-       setCheckMood("sad")
+      setCheckMood("sad")
       setSadQuotes(data)
-     } catch (error) {
+    } catch (error) {
       console.error("Error fetching quotes:", error);
     }
   }
 
-  function fetchQuotes(quotes,mood) {
+  function fetchQuotes(quotes, mood) {
     setCheckMood(mood);
-    // setQuotes(quotes)
-   }
+  }
 
   useEffect(() => {
     fetchQuotes(happyQuotes, "happy");
   }, []);
 
-  
+
 
   return (
     <div className="quotes" id="quotes">

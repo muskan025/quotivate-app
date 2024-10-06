@@ -1,73 +1,9 @@
-//  @import '../../-var.scss';
-//  .navbar{
-//     display: flex;
-//     justify-content: space-between;
-//     height: 10vh;
-//     padding-inline: 2rem;
-//     background: #000000f0;
-    
-    
-//   }
-
-//  .n-left{
-//     flex: 1;
-//     display: flex;
-//     align-items: center;
-// gap:4rem;
-//   justify-content: flex-start;
-//  }
-
-//  .n-name{
-//     font-size: 1.3rem;
-//     font-weight: bolder;
-//     color: $blue;
-//  }
-//  .n-list{
-//    width: 80%;
-//  }
-//  .n-list>ul{
-//     display: flex;
-//     justify-content: space-between;
-//     gap:2rem;
-   
-
-//     .pgs-left{
-//       display: flex;
-//       gap:2rem;
-
-//       &>li>*{
-//          // font-weight: bold;
-//          // font-size: 1.2rem;
-//       }
-//     }
-//     li{
-//         font-weight:bold; 
-// color: white;
-//         &:hover{
-//             color:$blue;
-//             cursor: pointer;
-//             text-decoration:underline;
-//         }
-//     }
-    
-//  }
-//  a{
-//    text-decoration:none;
-//   //  &:visited{
-//   //    color:inherit;
-//   //  }
-//  }
-
-//  .active{
-//   color:$blue;
- 
-//   text-decoration:underline;
-// }
- 
+@import "../../-var.scss";
 
 .navbar {
 	display: flex;
 	justify-content: space-between;
+  gap:4rem; 
   align-items: center;
 	height: 10vh;
 	padding:0 2rem;
@@ -75,28 +11,43 @@
 	color: white;
  
 }
-
+.my-quotes {
+  margin-left: auto;
+}
 .pgs-left{
   display: flex;
   gap: 4rem;
 }
 .n-name {
 	font-size: 1.3rem;
+	font-size: $fs-heading;
 	font-weight: bolder;
 	color: #3ABBC9;
 }
+
 ul {
 	list-style-type: none;
 	padding-left: 0;
 	display: flex;
     align-items: center;
 	gap: 4rem;
- 
-}
- li{
   width: 100%;
+  
+  li{
+   
+    a{
+       color:inherit;
+     }
+  } 
+} 
 
+.pgs-left,.pgs-right {
+  a{
+    font-size:$fs-subheading; 
+    color:inherit;
+   }
 }
+
 .active{
   color:$blue !important;
   text-decoration: underline;
@@ -138,5 +89,50 @@ padding:0.3rem;
      border-right: 1rem solid transparent;
   }
 
+  .hamburger{
+    display:none;
+  }
+  .open,.close {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+ @media (max-width:425px){
+  .hamburger{
+    display:block;
+    font-size:25px;
+    cursor:pointer;
+    position: relative;
+  
+  }
+  .open{
+    opacity: 1;
+    visibility: visible;
+  }
+  .close{
+    display: none;
+    visibility: hidden;
+   }
+  .navbar{
+    ul{
+      flex-direction: column;
+      z-index: 1;
+      background: white;
+      gap: 0.5rem;
+      padding: 1rem;
+      position: absolute;
+      width: fit-content;
+      top: 55px;
+      right: 0;
+      border-radius: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      li{
+        a{
+           color: black !important; 
+        }
+      }
+    }
+  }
 
- 
+ }
