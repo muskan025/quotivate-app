@@ -380,6 +380,14 @@ export const myquotes = [
     "like": 0,
     "save": 0
   },
+   {
+    "id": 17,
+    "image": "image10.jpg",
+    "quote": "Work hard to live your dream, if can't then leave your dream",
+    "author": "Muskan Dodmani",
+    "like": 0,
+    "save": 0
+  },
 ];
 
 export const friendshipquotes = [
