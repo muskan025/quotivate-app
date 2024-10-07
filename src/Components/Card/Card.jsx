@@ -15,14 +15,13 @@ import {
  
 export const Card = ({ quoteData, mood }) => {
   const { id, quote, like, author } = quoteData;
-  const [showBottom, setShowBottom] = useState(false);
-console.log("like",like)
- 
+  
   let dispatch = useDispatch();
 
   function saveToData() {
     dispatch(collection(quoteData));
-  }
+
+   }
 
   function likeButton() {
     if (mood === "happy") {
@@ -34,18 +33,28 @@ console.log("like",like)
     }
   }
 
+  function shareQuote() {
+    if (navigator.share) {
+      navigator.share({
+        title: 'Share this quote',
+        text: `"${quote}" - ${author}`,
+        url: window.location.href
+      }).catch(console.error);
+    } else {
+      console.log('Web Share API not supported');
+    }
+  }
+
   return (
     <div
       className="card"
       key={id}
-      onMouseEnter={() => setShowBottom(true)}
-      onMouseLeave={() => setShowBottom(false)}
     >
       <div className="c-quote">
         <p className="quote">{quote}</p>
         <p className="author">~ {author}</p>
       </div>
-      {showBottom &&  (
+      
         <div className="c-btm">
           <div className="c-lk-sh">
             <span className="like">
@@ -61,6 +70,7 @@ console.log("like",like)
               <FontAwesomeIcon
                 icon={faShareNodes}
                 style={{ color: "#0080ff" }}
+                onClick={shareQuote}
               />
             </span>
           </div>
@@ -72,7 +82,7 @@ console.log("like",like)
             />
           </span>
         </div>
-      )}
+      
     </div>
   );
 };

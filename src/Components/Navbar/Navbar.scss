@@ -15,7 +15,7 @@
   margin-left: auto;
 }
 .pgs-left{
-  display: flex;
+  display: flex; 
   gap: 4rem;
 }
 .n-name {
@@ -92,10 +92,7 @@ padding:0.3rem;
   .hamburger{
     display:none;
   }
-  .open,.close {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
+  
  @media (max-width:425px){
   .hamburger{
     display:block;
@@ -104,13 +101,12 @@ padding:0.3rem;
     position: relative;
   
   }
-  .open{
-    opacity: 1;
-    visibility: visible;
-  }
   .close{
     display: none;
     visibility: hidden;
+   }
+   .dropdown::before{
+    display: none;
    }
   .navbar{
     ul{
@@ -123,10 +119,8 @@ padding:0.3rem;
       width: fit-content;
       top: 55px;
       right: 0;
-      border-radius: 20px;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+       border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
       li{
         a{
            color: black !important; 

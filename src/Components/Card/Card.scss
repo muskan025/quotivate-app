@@ -36,27 +36,31 @@ font-style: italic;
 	justify-content: space-between;
 	position: absolute;
 	bottom: 0;
-	/* margin-bottom: -2rem; */
-	background-color: rgba(0, 0, 0, 0.265);
+ 	background-color: rgba(0, 0, 0, 0.265);
 	width: 90%;
 	padding: 0.5rem;
 	border-radius: 1rem;
 	padding-inline: 1rem;
 
+  .like,.share,.save{
+    cursor: pointer;
+  }
     .c-lk-sh {
-
+      .like{
+        width: 3rem; 
+    display: inline-block;
+      }
       .share {
         margin-left: 2rem;
         
       }
-     .like>*:hover,.share>*:hover{
-       
-      transform:scale(1.5); 
-     }
+    
     }
-    span:hover{
-        cursor: pointer;
-        transform:skew(-15deg) scale(1.5);  
-        
-       }
+   
+}
+
+@media (max-width:320px){
+  .card{
+    width:16rem;
+  }
 }

@@ -26,12 +26,12 @@
 }
 
 .saved-cards {
-  display: grid;
-  gap: 4rem;
+  display: flex;
+  gap: 2rem;
   justify-content: center;
-  padding-inline: 4rem;
-  grid-template-columns: repeat(2, 1fr);
+  padding-inline: 2rem;
   margin-top: 4rem;
+  flex-wrap: wrap;
 }
 .saved-cards .c-btm .save {
   display: none;

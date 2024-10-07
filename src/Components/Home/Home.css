@@ -49,7 +49,7 @@
 }
 .hero .h-content .h-btn {
   margin-left: 4rem;
-  margin-bottom: 13rem;
+  margin-block: 2rem 13rem;
   position: relative;
   font-size: clamp(1rem, 3vw, 1.375rem);
 }

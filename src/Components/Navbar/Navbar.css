@@ -93,11 +93,6 @@ ul li a {
   display: none;
 }
 
-.open, .close {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
-
 @media (max-width: 425px) {
   .hamburger {
     display: block;
@@ -105,13 +100,12 @@ ul li a {
     cursor: pointer;
     position: relative;
   }
-  .open {
-    opacity: 1;
-    visibility: visible;
-  }
   .close {
     display: none;
     visibility: hidden;
+  }
+  .dropdown::before {
+    display: none;
   }
   .navbar ul {
     flex-direction: column;
@@ -124,10 +118,8 @@ ul li a {
     width: fit-content;
     top: 55px;
     right: 0;
-    border-radius: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
   .navbar ul li a {
     color: black !important;
