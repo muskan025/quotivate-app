@@ -45,6 +45,9 @@ font-style: italic;
   .like,.share,.save{
     cursor: pointer;
   }
+  .save:hover{
+    transform: scale(1.05);
+  }
     .c-lk-sh {
       .like{
         width: 3rem; 

@@ -1,36 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
  import "./Card.scss";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import {
   collection,
-  likeCountAfraid,
-  likeCountHappy,
-  likeCountAngry,
+  toggleLike
 } from "../../app/slice/action";
  
-export const Card = ({ quoteData, mood }) => {
-  const { id, quote, like, author } = quoteData;
-  
+export const Card = ({quoteData}) => {
+  const { id,quote,author,category } = quoteData;
+  const quotesStorage = JSON.parse(localStorage.getItem("quotes"))
+  const storedQuote = quotesStorage.find((q)=>( q.quote === quote))
+   const quoteState = useSelector((state)=> state.counter[category].find((q)=>(q.id===id)))
+ 
   let dispatch = useDispatch();
 
   function saveToData() {
-    dispatch(collection(quoteData));
-
+    dispatch(collection(quoteState));
    }
 
   function likeButton() {
-    if (mood === "happy") {
-      dispatch(likeCountHappy(id - 1));
-    } else if (mood === "angry") {
-      dispatch(likeCountAngry(id - 1));
-    } else if (mood === "afraid") {
-      dispatch(likeCountAfraid(id - 1));
-    }
+    dispatch(toggleLike({category,id}));
   }
 
   function shareQuote() {
@@ -39,9 +33,9 @@ export const Card = ({ quoteData, mood }) => {
         title: 'Share this quote',
         text: `"${quote}" - ${author}`,
         url: window.location.href
-      }).catch(console.error);
+      }).catch(alert(console.error));
     } else {
-      console.log('Web Share API not supported');
+     alert('Web Share API not supported');
     }
   }
 
@@ -60,11 +54,11 @@ export const Card = ({ quoteData, mood }) => {
             <span className="like">
               <FontAwesomeIcon
                 icon={faHeart}
-                style={{ color: "#ff0000" }}
+                style={{ color: `${storedQuote?.isLiked ? '#ff0000':'#cccccc'}` }}
                 onClick={likeButton}
               />
 
-              <span style={{ marginLeft: "0.3rem" }}>{like}</span>
+              <span style={{ marginLeft: "0.3rem" }}>{storedQuote?.likes}</span>
             </span>
             <span className="share">
               <FontAwesomeIcon

@@ -6,7 +6,7 @@ export const FriendshipQuotes = () => {
     <div className='friendshipQuotes' > 
  <div className="cards-container">
   {friendshipquotes.length>0 && friendshipquotes.map((quote,idx)=>{
-     return <Card quoteData={quote}/>
+     return <Card key={idx} quoteData={quote}/>
   }
        
       )}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Quotes.css";
+import { happyquotes,angryquotes,afraidquotes,sadquotes} from './QuotesData'
 import happy from "../../images/images-quotes/happy.png";
 import sad from "../../images/images-quotes/sad.png";
 import angry from "../../images/images-quotes/angry.png";
@@ -11,39 +12,12 @@ import { Footer } from "../Footer/Footer";
 import { useSelector } from "react-redux";
 
 export const Quotes = () => {
-  const [checkMood, setCheckMood] = useState("");
-  const happyQuotes = useSelector((state) => state.counter.happyQuotes);
-  const angryQuotes = useSelector((state) => state.counter.angryQuotes);
-  const afraidQuotes = useSelector((state) => state.counter.afraidQuotes);
-  const [sadQuotes, setSadQuotes] = useState([]);
-  const quotes = checkMood === "happy" ? happyQuotes : (checkMood === "sad" ? sadQuotes : checkMood === "angry" ? angryQuotes : afraidQuotes)
-  const sadURL =
-    "https://653f87939e8bd3be29e0befa.mockapi.io/quotivate/v1/sadquotes";
+   const [quotesArr, setQuotesArr] = useState(happyquotes);  
 
-  async function fetchQuotesAPI(url) {
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error("The process is taking longer time");
-      }
-      const data = await response.json();
-      setCheckMood("sad")
-      setSadQuotes(data)
-    } catch (error) {
-      console.error("Error fetching quotes:", error);
-    }
+  function fetchQuotes(quotes) {
+    setQuotesArr(quotes)
   }
-
-  function fetchQuotes(quotes, mood) {
-    setCheckMood(mood);
-  }
-
-  useEffect(() => {
-    fetchQuotes(happyQuotes, "happy");
-  }, []);
-
-
-
+ 
   return (
     <div className="quotes" id="quotes">
       <Header
@@ -68,34 +42,34 @@ export const Quotes = () => {
             src={happy}
             alt=""
             className="happy"
-            onClick={() => fetchQuotes(happyQuotes, "happy")}
+            onClick={() => fetchQuotes(happyquotes)}
           />
           <img
             src={sad}
             alt=""
             className="sad"
-            onClick={() => fetchQuotesAPI(sadURL)}
+            onClick={() => fetchQuotes(sadquotes)}
           />
           <img
             src={angry}
             alt=""
             className="angry"
-            onClick={() => fetchQuotes(angryQuotes, "angry")}
+            onClick={() => fetchQuotes(angryquotes)}
           />
           <img
             src={afraid}
             alt=""
             className="afraid"
-            onClick={() => fetchQuotes(afraidQuotes, "afraid")}
+            onClick={() => fetchQuotes(afraidquotes)}
           />
         </div>
         <p>Choose your mood!</p>
       </div>
 
       <div className="cards-container">
-        {quotes.length > 0 &&
-          quotes.map((quote, idx) => {
-            return <Card quoteData={quote} mood={checkMood} />;
+        {quotesArr.length > 0 &&
+          quotesArr.map((quote, idx) => {
+            return <Card key={idx} quoteData={quote}  />;
           })}
       </div>
 
