@@ -77,73 +77,82 @@ export const sadquotes = [
     "quote": "Tears come from the heart and not from the brain.",
     "author": "Leonardo da Vinci",
     "likes": 0,
-    "category": "sadquotes"
+    "category": "sadquotes",
+    "isSaved": false
   },
   {
     "id": 2,
     "quote": "The walls we build around us to keep sadness out also keep out the joy.",
     "author": "Jim Rohn",
     "likes": 0,
-    "category": "sadquotes"
+    "category": "sadquotes",
+    "isSaved": false
   },
   {
     "id": 3,
     "quote": "Sadness flies away on the wings of time.",
     "author": "Jean de La Fontaine",
     "likes": 0,
-    "category": "sadquotes"
+    "category": "sadquotes",
+    "isSaved": false
   },
   {
     "id": 4,
     "quote": "Heavy hearts, like heavy clouds in the sky, are best relieved by the letting of a little water.",
     "author": "Christopher Morley",
     "likes": 0,
-    "category": "sadquotes"
+    "category": "sadquotes",
+    "isSaved": false
   },
   {
     "id": 5,
     "quote": "The word ‘happy’ would lose its meaning if it were not balanced by sadness.",
     "author": "Carl Jung",
     "likes": 0,
-    "category": "sadquotes"
+    "category": "sadquotes",
+    "isSaved": false
   },
   {
     "id": 6,
     "quote": "Every human walks around with a certain kind of sadness. They may not wear it on their sleeves, but it's there if you look deep.",
     "author": "Taraji P. Henson",
     "likes": 0,
-    "category": "sadquotes"
+    "category": "sadquotes",
+    "isSaved": false
   },
   {
     "id": 7,
     "quote": "Sometimes, it takes sadness to know happiness, noise to appreciate silence, and absence to value presence.",
     "author": "Anonymous",
     "likes": 0,
-    "category": "sadquotes"
+    "category": "sadquotes",
+    "isSaved": false
   },
   {
     "id": 8,
     "quote": "It is a curious sensation: the sort of pain that goes mercifully beyond our powers of feeling.",
     "author": "C.S. Lewis",
     "likes": 0,
-    "category": "sadquotes"
+    "category": "sadquotes",
+    "isSaved": false
   },
   {
     "id": 9,
     "quote": "Our sweetest songs are those that tell of saddest thought.",
     "author": "Percy Bysshe Shelley",
     "likes": 0,
-    "category": "sadquotes"
+    "category": "sadquotes",
+    "isSaved": false
   },
   {
     "id": 10,
     "quote": "Nothing is more sad than the death of an illusion.",
     "author": "Arthur Koestler",
     "likes": 0,
-    "category": "sadquotes"
+    "category": "sadquotes",
+    "isSaved": false
   }
 ];
-
 
 export const angryquotes = [
   {
@@ -151,73 +160,82 @@ export const angryquotes = [
     "quote": "Don't let anyone rent a space in your head, especially for free anger.",
     "author": "Anonymous",
     "likes": 0,
-    "category": "angryquotes"
+    "category": "angryquotes",
+    "isSaved": false
   },
   {
     "id": 2,
     "quote": "Anger is a powerful force. Use it wisely, not wastefully.",
     "author": "Albert Einstein",
     "likes": 0,
-    "category": "angryquotes"
+    "category": "angryquotes",
+    "isSaved": false
   },
   {
     "id": 3,
     "quote": "Your anger is your responsibility. Don't let it control you.",
     "author": "Eleanor Roosevelt",
     "likes": 0,
-    "category": "angryquotes"
+    "category": "angryquotes",
+    "isSaved": false
   },
   {
     "id": 4,
     "quote": "Anger is like a storm; it comes fast, but it also goes fast.",
     "author": "Buddha",
     "likes": 0,
-    "category": "angryquotes"
+    "category": "angryquotes",
+    "isSaved": false
   },
   {
     "id": 5,
     "quote": "The best revenge is to be calm and show them you're in control.",
     "author": "Anonymous",
     "likes": 0,
-    "category": "angryquotes"
+    "category": "angryquotes",
+    "isSaved": false
   },
   {
     "id": 6,
     "quote": "Let your anger be a spark for positive change, not destruction.",
     "author": "Anonymous",
     "likes": 0,
-    "category": "angryquotes"
+    "category": "angryquotes",
+    "isSaved": false
   },
   {
     "id": 7,
     "quote": "Anger is an acid that can do more harm to the vessel in which it is stored than to anything on which it is poured.",
     "author": "Mark Twain",
     "likes": 0,
-    "category": "angryquotes"
+    "category": "angryquotes",
+    "isSaved": false
   },
   {
     "id": 8,
     "quote": "Count to ten when angry; your words will be more valuable than your regrets.",
     "author": "Anonymous",
     "likes": 0,
-    "category": "angryquotes"
+    "category": "angryquotes",
+    "isSaved": false
   },
   {
     "id": 9,
     "quote": "Stay calm and let karma deal with those who deserve it.",
     "author": "Anonymous",
     "likes": 0,
-    "category": "angryquotes"
+    "category": "angryquotes",
+    "isSaved": false
   },
   {
     "id": 10,
     "quote": "Anger is a wind which blows out the lamp of the mind.",
     "author": "Robert Green Ingersoll",
     "likes": 0,
-    "category": "angryquotes"
+    "category": "angryquotes",
+    "isSaved": false
   }
 ];
-
 
 export const afraidquotes = [
   {

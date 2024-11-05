@@ -1,27 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
-import { faBookmark } from "@fortawesome/free-solid-svg-icons";
- import "./Card.scss";
+import { faBookmark } from '@fortawesome/free-solid-svg-icons'
+import "./Card.scss";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
-  collection,
+  toggleSave,
   toggleLike
 } from "../../app/slice/action";
  
 export const Card = ({quoteData}) => {
   const { id,quote,author,category } = quoteData;
-  const quotesStorage = JSON.parse(localStorage.getItem("quotes"))
+  const quotesStorage = JSON.parse(localStorage.getItem("quotes")) || []
   const storedQuote = quotesStorage.find((q)=>( q.quote === quote))
+  const savedQuotes = useSelector((state) => state.counter.savedQuotes);
+  const isBookmarked = savedQuotes.some(q => q.quote === quote);
    const quoteState = useSelector((state)=> state.counter[category].find((q)=>(q.id===id)))
  
   let dispatch = useDispatch();
 
   function saveToData() {
-    dispatch(collection(quoteState));
-   }
+    dispatch(toggleSave(quoteState));
+  }
 
   function likeButton() {
     dispatch(toggleLike({category,id}));
@@ -69,11 +71,11 @@ export const Card = ({quoteData}) => {
             </span>
           </div>
           <span className="save">
-            <FontAwesomeIcon
-              icon={faBookmark}
-              style={{ color: "#ffff00" }}
-              onClick={saveToData}
-            />
+          <FontAwesomeIcon
+  icon={ faBookmark }
+  style={{ color: isBookmarked ? "yellow" : "#808080" }}
+  onClick={saveToData}
+/>
           </span>
         </div>
       

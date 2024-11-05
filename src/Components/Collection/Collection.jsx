@@ -1,4 +1,4 @@
-import React  from "react";
+import React, { useEffect, useState }  from "react";
 import "./Collection.css";
 import { Card } from "../Card/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,9 +6,10 @@ import { faFolderOpen } from "@fortawesome/free-solid-svg-icons";
  import trees from "../../images/images-quotes/trees.jpg";
  import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
+import { useSelector } from "react-redux";
 
 export const Collection = () => {
-     const savedQuotes= JSON.parse(localStorage.getItem("savedQuotes"))
+  const savedQuotes = useSelector((state) => state.counter.savedQuotes);
 
    return (
     <div className="collection">
@@ -26,17 +27,15 @@ export const Collection = () => {
       />
 
       <div className="saved-cards">
-     
-        {savedQuotes.length > 0 ?
+        {savedQuotes?.length > 0 ?
           savedQuotes.map((data, idx) => (
-            <Card quoteData={data} key={idx} />
+            <Card quoteData={data} key={idx}/>
           )) : (
             <div  className="no-collection"><FontAwesomeIcon icon={faFolderOpen} />
            <p>No collection yet!</p></div>
            )
           }
       </div>
-
       <Footer />
     </div>
   );

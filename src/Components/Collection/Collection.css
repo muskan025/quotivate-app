@@ -33,9 +33,6 @@
   margin-top: 4rem;
   flex-wrap: wrap;
 }
-.saved-cards .c-btm .save {
-  display: none;
-}
 
 .c-mssg {
   font-weight: bold;

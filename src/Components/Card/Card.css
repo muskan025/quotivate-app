@@ -46,6 +46,9 @@
 .c-btm .like, .c-btm .share, .c-btm .save {
   cursor: pointer;
 }
+.c-btm .save:hover {
+  transform: scale(1.05);
+}
 .c-btm .c-lk-sh .like {
   width: 3rem;
   display: inline-block;
