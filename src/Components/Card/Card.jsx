@@ -12,21 +12,17 @@ import {
 } from "../../app/slice/action";
  
 export const Card = ({quoteData}) => {
-  const { id,quote,author,category } = quoteData;
-  const quotesStorage = JSON.parse(localStorage.getItem("quotes")) || []
-  const storedQuote = quotesStorage.find((q)=>( q.quote === quote))
-  const savedQuotes = useSelector((state) => state.counter.savedQuotes);
-  const isBookmarked = savedQuotes.some(q => q.quote === quote);
-   const quoteState = useSelector((state)=> state.counter[category].find((q)=>(q.id===id)))
- 
-  let dispatch = useDispatch();
-
+  const { id,quote,author} = quoteData;
+  const likedQuote = useSelector((state) => state.counter.likedQuotes.find((q)=>(q.quote===quote)));
+  const isBookmarked = useSelector((state) => state.counter.savedQuotes.find((q)=>(q.quote===quote)));
+   let dispatch = useDispatch();
+  
   function saveToData() {
-    dispatch(toggleSave(quoteState));
+    dispatch(toggleSave(quoteData));
   }
 
   function likeButton() {
-    dispatch(toggleLike({category,id}));
+    dispatch(toggleLike(quoteData));
   }
 
   function shareQuote() {
@@ -56,11 +52,9 @@ export const Card = ({quoteData}) => {
             <span className="like">
               <FontAwesomeIcon
                 icon={faHeart}
-                style={{ color: `${storedQuote?.isLiked ? '#ff0000':'#cccccc'}` }}
+                style={{ color: `${likedQuote?.isLiked ? '#ff0000':'#cccccc'}` }}
                 onClick={likeButton}
               />
-
-              <span style={{ marginLeft: "0.3rem" }}>{storedQuote?.likes}</span>
             </span>
             <span className="share">
               <FontAwesomeIcon

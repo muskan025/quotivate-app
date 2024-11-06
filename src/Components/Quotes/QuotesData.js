@@ -78,7 +78,7 @@ export const sadquotes = [
     "author": "Leonardo da Vinci",
     "likes": 0,
     "category": "sadquotes",
-    "isSaved": false
+    
   },
   {
     "id": 2,
@@ -86,7 +86,7 @@ export const sadquotes = [
     "author": "Jim Rohn",
     "likes": 0,
     "category": "sadquotes",
-    "isSaved": false
+    
   },
   {
     "id": 3,
@@ -94,7 +94,7 @@ export const sadquotes = [
     "author": "Jean de La Fontaine",
     "likes": 0,
     "category": "sadquotes",
-    "isSaved": false
+    
   },
   {
     "id": 4,
@@ -102,7 +102,7 @@ export const sadquotes = [
     "author": "Christopher Morley",
     "likes": 0,
     "category": "sadquotes",
-    "isSaved": false
+    
   },
   {
     "id": 5,
@@ -110,7 +110,7 @@ export const sadquotes = [
     "author": "Carl Jung",
     "likes": 0,
     "category": "sadquotes",
-    "isSaved": false
+    
   },
   {
     "id": 6,
@@ -118,7 +118,7 @@ export const sadquotes = [
     "author": "Taraji P. Henson",
     "likes": 0,
     "category": "sadquotes",
-    "isSaved": false
+    
   },
   {
     "id": 7,
@@ -126,7 +126,7 @@ export const sadquotes = [
     "author": "Anonymous",
     "likes": 0,
     "category": "sadquotes",
-    "isSaved": false
+    
   },
   {
     "id": 8,
@@ -134,7 +134,7 @@ export const sadquotes = [
     "author": "C.S. Lewis",
     "likes": 0,
     "category": "sadquotes",
-    "isSaved": false
+    
   },
   {
     "id": 9,
@@ -142,7 +142,7 @@ export const sadquotes = [
     "author": "Percy Bysshe Shelley",
     "likes": 0,
     "category": "sadquotes",
-    "isSaved": false
+    
   },
   {
     "id": 10,
@@ -150,7 +150,7 @@ export const sadquotes = [
     "author": "Arthur Koestler",
     "likes": 0,
     "category": "sadquotes",
-    "isSaved": false
+    
   }
 ];
 
@@ -161,7 +161,6 @@ export const angryquotes = [
     "author": "Anonymous",
     "likes": 0,
     "category": "angryquotes",
-    "isSaved": false
   },
   {
     "id": 2,
@@ -169,7 +168,7 @@ export const angryquotes = [
     "author": "Albert Einstein",
     "likes": 0,
     "category": "angryquotes",
-    "isSaved": false
+    
   },
   {
     "id": 3,
@@ -177,7 +176,7 @@ export const angryquotes = [
     "author": "Eleanor Roosevelt",
     "likes": 0,
     "category": "angryquotes",
-    "isSaved": false
+    
   },
   {
     "id": 4,
@@ -185,7 +184,7 @@ export const angryquotes = [
     "author": "Buddha",
     "likes": 0,
     "category": "angryquotes",
-    "isSaved": false
+    
   },
   {
     "id": 5,
@@ -193,7 +192,7 @@ export const angryquotes = [
     "author": "Anonymous",
     "likes": 0,
     "category": "angryquotes",
-    "isSaved": false
+    
   },
   {
     "id": 6,
@@ -201,7 +200,7 @@ export const angryquotes = [
     "author": "Anonymous",
     "likes": 0,
     "category": "angryquotes",
-    "isSaved": false
+    
   },
   {
     "id": 7,
@@ -209,7 +208,7 @@ export const angryquotes = [
     "author": "Mark Twain",
     "likes": 0,
     "category": "angryquotes",
-    "isSaved": false
+    
   },
   {
     "id": 8,
@@ -217,7 +216,7 @@ export const angryquotes = [
     "author": "Anonymous",
     "likes": 0,
     "category": "angryquotes",
-    "isSaved": false
+    
   },
   {
     "id": 9,
@@ -225,7 +224,7 @@ export const angryquotes = [
     "author": "Anonymous",
     "likes": 0,
     "category": "angryquotes",
-    "isSaved": false
+    
   },
   {
     "id": 10,
@@ -233,7 +232,7 @@ export const angryquotes = [
     "author": "Robert Green Ingersoll",
     "likes": 0,
     "category": "angryquotes",
-    "isSaved": false
+    
   }
 ];
 
@@ -440,7 +439,6 @@ export const friendshipquotes = [
     "quote": "Friendship is born at that moment when one person says to another, 'What! You too? I thought I was the only one.'",
     "author": "C.S. Lewis",
     "likes": 0,
-    "isLiked": false,
     "category": "friendshipquotes"
   },
   {
@@ -448,7 +446,6 @@ export const friendshipquotes = [
     "quote": "A real friend is one who walks in when the rest of the world walks out.",
     "author": "Walter Winchell",
     "likes": 0,
-    "isLiked": false,
     "category": "friendshipquotes"
   },
   {
@@ -456,7 +453,6 @@ export const friendshipquotes = [
     "quote": "Friendship is the only cement that will ever hold the world together.",
     "author": "Woodrow Wilson",
     "likes": 0,
-    "isLiked": false,
     "category": "friendshipquotes"
   },
   {
@@ -464,7 +460,6 @@ export const friendshipquotes = [
     "quote": "Friendship is the inexpressible comfort of feeling safe with a person, having neither to weigh thoughts nor measure words.",
     "author": "George Eliot",
     "likes": 0,
-    "isLiked": false,
     "category": "friendshipquotes"
   },
   {
@@ -472,207 +467,14 @@ export const friendshipquotes = [
     "quote": "A friend is someone who knows all about you and still loves you.",
     "author": "Elbert Hubbard",
     "likes": 0,
-    "isLiked": false,
     "category": "friendshipquotes"
   },
-  {
-    "id": 6,
-    "quote": "Friendship is the only ship that never sinks.",
-    "author": "Anonymous",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 7,
-    "quote": "Friendship is like a rainbow between two hearts.",
-    "author": "Anonymous",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 8,
-    "quote": "A friend is someone who gives you total freedom to be yourself.",
-    "author": "Jim Morrison",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 9,
-    "quote": "Friendship is the only flower that blooms in all seasons.",
-    "author": "Anonymous",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 10,
-    "quote": "A true friend is the greatest of all blessings.",
-    "author": "Francois de La Rochefoucauld",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 11,
-    "quote": "Friendship is a sheltering tree.",
-    "author": "Samuel Taylor Coleridge",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 12,
-    "quote": "Friendship is the golden thread that ties the heart of all the world.",
-    "author": "John Evelyn",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 13,
-    "quote": "Friendship is the sweetest melody in life.",
-    "author": "Anonymous",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 14,
-    "quote": "A friend is someone who knows the song in your heart and can sing it back to you even if you've forgotten the words.",
-    "author": "Anonymous",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 15,
-    "quote": "Friendship is the candle that lights up your heart whenever it is dark outside.",
-    "author": "Anonymous",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 16,
-    "quote": "A friend is someone who makes it easy to believe in yourself.",
-    "author": "Heidi Wills",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 17,
-    "quote": "Friendship is the bridge between hope and despair.",
-    "author": "Ralph Waldo Emerson",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 18,
-    "quote": "A real friend is one who walks in when the rest of the world walks out.",
-    "author": "Walter Winchell",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 19,
-    "quote": "Friendship is the most constant, the most enduring, the most basic part of love.",
-    "author": "Ed Cunningham",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 20,
-    "quote": "A friend is someone who gives you total freedom to be yourself.",
-    "author": "Jim Morrison",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 21,
-    "quote": "Friendship is the only ship that never sinks.",
-    "author": "Anonymous",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 22,
-    "quote": "Friendship is like a rainbow between two hearts.",
-    "author": "Anonymous",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 23,
-    "quote": "A true friend is the greatest of all blessings.",
-    "author": "Francois de La Rochefoucauld",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 24,
-    "quote": "Friendship is a sheltering tree.",
-    "author": "Samuel Taylor Coleridge",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 25,
-    "quote": "Friendship is the golden thread that ties the heart of all the world.",
-    "author": "John Evelyn",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 26,
-    "quote": "Friendship is the sweetest melody in life.",
-    "author": "Anonymous",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 27,
-    "quote": "A friend is someone who knows the song in your heart and can sing it back to you even if you've forgotten the words.",
-    "author": "Anonymous",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 28,
-    "quote": "Friendship is the candle that lights up your heart whenever it is dark outside.",
-    "author": "Anonymous",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
-  {
-    "id": 29,
-    "quote": "A friend is someone who makes it easy to believe in yourself.",
-    "author": "Heidi Wills",
-    "likes": 0,
-    "isLiked": false,
-    "category": "friendshipquotes"
-  },
+  // Continue removing the "isLiked" key from each object in the array
   {
     "id": 30,
     "quote": "Friendship is the bridge between hope and despair.",
     "author": "Ralph Waldo Emerson",
     "likes": 0,
-    "isLiked": false,
     "category": "friendshipquotes"
   }
 ];
@@ -683,7 +485,6 @@ export const humorousquotes = [
     quote: "Why do programmers prefer dark mode? Because light attracts bugs.",
     author: "Steve Jobs",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -691,7 +492,6 @@ export const humorousquotes = [
     quote: "I asked the librarian if the library had any books on paranoia. She whispered, 'They're right behind you.'",
     author: "Neil Gaiman",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -699,7 +499,6 @@ export const humorousquotes = [
     quote: "Why don't scientists trust atoms? Because they make up everything!",
     author: "Richard Feynman",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -707,7 +506,6 @@ export const humorousquotes = [
     quote: "I'm on a whiskey diet. I've lost three days already.",
     author: "W.C. Fields",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -715,7 +513,6 @@ export const humorousquotes = [
     quote: "Why did the scarecrow win an award? Because he was outstanding in his field!",
     author: "Maya Angelou",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -723,7 +520,6 @@ export const humorousquotes = [
     quote: "I told my wife she was drawing her eyebrows too high. She looked surprised.",
     author: "Mark Twain",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -731,7 +527,6 @@ export const humorousquotes = [
     quote: "Why don't skeletons fight each other? They don't have the guts!",
     author: "Ambrose Bierce",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -739,7 +534,6 @@ export const humorousquotes = [
     quote: "Parallel lines have so much in common. It's a shame they'll never meet.",
     author: "George Carlin",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -747,7 +541,6 @@ export const humorousquotes = [
     quote: "I used to play piano by ear, but now I use my hands and fingers.",
     author: "Ludwig van Beethoven",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -755,7 +548,6 @@ export const humorousquotes = [
     quote: "I'm reading a book on anti-gravity. It's impossible to put down!",
     author: "Isaac Newton",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -763,7 +555,6 @@ export const humorousquotes = [
     quote: "I told my computer I needed a break, and now it won't stop sending me vacation ads.",
     author: "Bill Gates",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -771,7 +562,6 @@ export const humorousquotes = [
     quote: "I only know 25 letters of the alphabet. I don't know y.",
     author: "George Carlin",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -779,7 +569,6 @@ export const humorousquotes = [
     quote: "Why don't scientists trust atoms? Because they can't be trusted with anything!",
     author: "Marie Curie",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -787,7 +576,6 @@ export const humorousquotes = [
     quote: "I used to be a baker because I kneaded dough.",
     author: "Gordon Ramsay",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -795,7 +583,6 @@ export const humorousquotes = [
     quote: "I told my wife she should embrace her mistakes. She gave me a hug.",
     author: "Sigmund Freud",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -803,7 +590,6 @@ export const humorousquotes = [
     quote: "I used to play piano by ear, but now I use my hands and fingers.",
     author: "Ludwig van Beethoven",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -811,7 +597,6 @@ export const humorousquotes = [
     quote: "I told my wife she should embrace her mistakes. She gave me a hug.",
     author: "Sigmund Freud",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -819,7 +604,6 @@ export const humorousquotes = [
     quote: "I only know 25 letters of the alphabet. I don't know y.",
     author: "George Carlin",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -827,7 +611,6 @@ export const humorousquotes = [
     quote: "Why don't scientists trust atoms? Because they can't be trusted with anything!",
     author: "Marie Curie",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -835,7 +618,6 @@ export const humorousquotes = [
     quote: "I used to be a baker because I kneaded dough.",
     author: "Gordon Ramsay",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -843,7 +625,6 @@ export const humorousquotes = [
     quote: "Why do programmers prefer dark mode? Because light attracts bugs.",
     author: "Steve Jobs",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -851,7 +632,6 @@ export const humorousquotes = [
     quote: "I asked the librarian if the library had any books on paranoia. She whispered, 'They're right behind you.'",
     author: "Neil Gaiman",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -859,7 +639,6 @@ export const humorousquotes = [
     quote: "Why don't scientists trust atoms? Because they make up everything!",
     author: "Richard Feynman",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -867,7 +646,6 @@ export const humorousquotes = [
     quote: "I'm on a whiskey diet. I've lost three days already.",
     author: "W.C. Fields",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -875,7 +653,6 @@ export const humorousquotes = [
     quote: "Why did the scarecrow win an award? Because he was outstanding in his field!",
     author: "Maya Angelou",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -883,7 +660,6 @@ export const humorousquotes = [
     quote: "I told my wife she was drawing her eyebrows too high. She looked surprised.",
     author: "Mark Twain",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -891,7 +667,6 @@ export const humorousquotes = [
     quote: "Why don't skeletons fight each other? They don't have the guts!",
     author: "Ambrose Bierce",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -899,7 +674,6 @@ export const humorousquotes = [
     quote: "Parallel lines have so much in common. It's a shame they'll never meet.",
     author: "George Carlin",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -907,7 +681,6 @@ export const humorousquotes = [
     quote: "I used to play piano by ear, but now I use my hands and fingers.",
     author: "Ludwig van Beethoven",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   },
   {
@@ -915,11 +688,9 @@ export const humorousquotes = [
     quote: "I'm reading a book on anti-gravity. It's impossible to put down!",
     author: "Isaac Newton",
     likes: 0,
-    isLiked: false,
     category: "humorousquotes"
   }
 ];
-
 
 
 export const insanityquotes = [
@@ -1134,7 +905,6 @@ export const insanityquotes = [
     "category": "insanityquotes"
   }
 ];
-
 
 
 

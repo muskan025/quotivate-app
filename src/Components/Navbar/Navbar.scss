@@ -11,8 +11,11 @@
 	color: white;
  position: fixed;
  top:0;
- opacity:0.5;
  z-index: 1;
+ width: 100%;
+ background: linear-gradient(0deg, rgb(142 142 142 / 18%), #000000bf);
+    background-blend-mode: darken;
+    backdrop-filter: blur(6px);
 }
 .my-quotes {
   margin-left: auto;

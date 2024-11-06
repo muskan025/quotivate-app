@@ -1,16 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { happyquotes,sadquotes,angryquotes,afraidquotes,myquotes,friendshipquotes,humorousquotes,insanityquotes } from '../../Components/Quotes/QuotesData'
 
 const initialState = {
-  happyquotes,
-  sadquotes,
-  angryquotes,
-  afraidquotes,
-  myquotes,
-  friendshipquotes,
-  humorousquotes,
-  insanityquotes,
-  savedQuotes:[]
+  likedQuotes: JSON.parse(localStorage.getItem("quotes")) || [],
+  savedQuotes: JSON.parse(localStorage.getItem("savedQuotes")) || []
 }
 
 export const counterSlice = createSlice({
@@ -21,49 +13,37 @@ export const counterSlice = createSlice({
     toggleSave: (state, action) => {
       let {quote} = action.payload
  
-      const storedQuotes = JSON.parse(localStorage.getItem("savedQuotes")) || []
-      const storedIndex = storedQuotes.findIndex((q)=>q.quote===quote)
+      const savedQuotes = state.savedQuotes.slice();
+      const storedIndex = savedQuotes.findIndex((q)=>q.quote===quote)
    
-      
        if(storedIndex!==-1){
-        storedQuotes.splice(storedIndex,1)
+        savedQuotes.splice(storedIndex,1)
        }
        else {
-        storedQuotes.push({
+        savedQuotes.push({
           ...action.payload,isSaved: true
         })
        }
-       localStorage.setItem("savedQuotes",JSON.stringify(storedQuotes))
-       state.savedQuotes = storedQuotes
+       localStorage.setItem("savedQuotes",JSON.stringify(savedQuotes))
+       state.savedQuotes = savedQuotes
     },
     toggleLike:(state,action)=>{
-      const {category,id} = action.payload
-      const quote = state[category].find((q)=> q.id === id)
-      const likedQuotes = JSON.parse(localStorage.getItem("quotes")) || []
-      if(quote){
-        quote.isLiked = !quote.isLiked
-        quote.likes += quote.isLiked ? 1:-1
-      }
-      
-      if(quote.isLiked){
-        likedQuotes.push({
-          id:quote.id,
-          quote:quote.quote,
-          category,
-          likes:quote.likes,
-          isLiked: true
-        })
-       }
-       else{
-        const storedIndex = likedQuotes.findIndex((q)=>q.quote===quote.quote)
+      const {quote} = action.payload
+
+      const likedQuotes = state.likedQuotes.slice();
+      const storedIndex = likedQuotes.findIndex((q)=>q.quote===quote)
+ 
         if(storedIndex!==-1){
-
-        likedQuotes.splice(storedIndex,1)
-      }
-            }
-
+          likedQuotes.splice(storedIndex,1)
+        }
+        else{
+        likedQuotes.push({...action.payload,
+          isLiked: true,})
+        }
+ 
         localStorage.setItem("quotes",JSON.stringify(likedQuotes))
-      
+        state.likedQuotes = likedQuotes
+   
 },
   },
 })

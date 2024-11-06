@@ -6,8 +6,7 @@
 .intro {
   position: relative;
   width: 100%;
-  padding-bottom: 8rem;
-  padding-top: 2rem;
+  padding-block: 6rem 8rem;
   padding-inline: 0.5rem;
   background-color: black;
 }
